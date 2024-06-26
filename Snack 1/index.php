@@ -26,7 +26,7 @@
 
     var_dump($teams);
 
-    $randomNumbers = rand(1,10);
+    $randomNumbers = rand(1,20);
     echo $randomNumbers
 ?>
 
