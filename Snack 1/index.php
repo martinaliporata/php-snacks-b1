@@ -8,26 +8,30 @@
         ],
         [
             "hometeam" => "verdi",
-            "visiting team" => "blu",
-            "points home team" => 5,
-            "points visiting team" => 6,
+            "visitingteam" => "blu",
+            "pointshometeam" => 5,
+            "pointsvisitingteam" => 6,
         ],[
             "hometeam" => "fucsia",
-            "visiting team" => "rosa",
-            "points home team" => 7,
-            "points visiting team" => 2,
+            "visitingteam" => "rosa",
+            "pointshometeam" => 7,
+            "pointsvisitingteam" => 2,
         ],[
             "hometeam" => "neri",
-            "visiting team" => "grigi",
-            "points home team" => 7, 
-            "points visiting team" => 10,
+            "visitingteam" => "grigi",
+            "pointshometeam" => 7,
+            "pointsvisitingteam" => 10,
         ],
     ];
 
     var_dump($teams);
 
     $randomNumbers = rand(1,20);
-    echo $randomNumbers
+    echo $randomNumbers;
+
+    for ($teams as $team) {
+        $team['pointshometeam'] = $randomNumber;
+    }
 ?>
 
-correzione
+<!-- correzione -->
