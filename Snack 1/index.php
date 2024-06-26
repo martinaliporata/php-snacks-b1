@@ -7,20 +7,27 @@
             "pointsvisitingteam" => 4,
         ],
         [
-            "hometeam" => "rossi"
-            "visiting team" => "gialli"
-            "points home team" => 
-            "points visiting team" =>
+            "hometeam" => "verdi",
+            "visiting team" => "blu",
+            "points home team" => 5,
+            "points visiting team" => 6,
         ],[
-            "hometeam" => "rossi"
-            "visiting team" => "gialli"
-            "points home team" => 
-            "points visiting team" =>
+            "hometeam" => "fucsia",
+            "visiting team" => "rosa",
+            "points home team" => 7,
+            "points visiting team" => 2,
         ],[
-            "hometeam" => "rossi"
-            "visiting team" => "gialli"
-            "points home team" => 
-            "points visiting team" =>
+            "hometeam" => "neri",
+            "visiting team" => "grigi",
+            "points home team" => 7, 
+            "points visiting team" => 10,
         ],
-    ]
+    ];
+
+    var_dump($teams);
+
+    $randomNumbers = rand(1,10);
+    echo $randomNumbers
 ?>
+
+correzione
