@@ -26,10 +26,7 @@
 
     var_dump($teams);
 
-    $randomNumbers = rand(1,20);
-    echo $randomNumbers;
-
-    for ($teams as $team) {
+    foreach ($teams as $team) {
         $team['pointshometeam'] = $randomNumber;
     }
 ?>
