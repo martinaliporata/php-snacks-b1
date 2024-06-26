@@ -3,18 +3,19 @@
         echo "Accesso riuscito";
     } else {
         echo "Accesso negato";
-    }
+    };
 
     if (strpos($_GET[mail], "@" && ".", offset)) {
         echo "Accesso riuscito";
     } else {
         echo "Accesso negato";
-    } 
-     e che age sia un numero.
+    };
     
-    "Accesso riuscito"
-
-    "Accesso negato"
+    if (is_numeric($_GET[age])) {
+        echo "Accesso riuscito";
+    } else {
+        echo "Accesso negato";
+    } 
 ?>
 
 <!DOCTYPE html>
