@@ -1,12 +1,8 @@
-<?php
-    $randomNumbers = [
-        '',
-    ];
+<?php    
     
-    
-    for ($i=0; $i < 15; $i++) {
-        $generatedNumber= rand(1,100);
-        $risultato = array_unique($generatedNumber);
-        echo $risultato;
+    $randomNumbers = [];
+
+    while (count($randomNumbers) < 15) {
+        $singleNum = rand(1, 20);
     }
 ?>
