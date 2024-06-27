@@ -1,7 +1,6 @@
 <?php
 
 $posts = [
-
     '24/06/2024' => [
         [
             'title' => 'Post 1',
@@ -39,39 +38,25 @@ $posts = [
         ]
     ],
 ];
-
-foreach ($posts as $post => $value) {
-    var_dump($post, $value);
-}
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Snack 3</title>
-</head>
-<body>
-    <main>
+<h1>
+    I nostri post
+</h1>
+    <!-- Questo foreach cicla per 3: la key è la data-->
+<?php foreach($posts as $data => $postPerData) { ?>
+    <li>
+        Lista dei post scritti in data: <?php echo $data ?>
         <ul>
-            <?php foreach($posts as $key => $data) { ?>
+            <!-- per ogni postPerData dammi un post  -->
+            <?php foreach($postPerData as $singlePost) { ?>
             <li>
-                Data: <?php echo $key ?>
-                <ul>
-                    <?php foreach($data as $singlePost) { ?>
-                    <li>
-                        <p> Title: <?php echo $singlePost['title']; ?> </p>
-                        <p> Author: <?php echo $singlePost['author']; ?> </p>
-                        <p> Text: <?php echo $singlePost['text']; ?> </p>
-                    </li>
-                    <?php } ?>
-                </ul>
+                <!-- stampi il titolo, l'autore e il testo del singlePost -->
+                <p> Title: <?php echo $singlePost["title"]; ?> </p>
+                <p> Author: <?php echo $singlePost["author"]; ?> </p>
+                <p> Text: <?php echo $singlePost["text"]; ?> </p>
             </li>
             <?php } ?>
         </ul>
-    </main>
-</body>
-</html>
-
-    
+    </li>
+<?php } ?>
