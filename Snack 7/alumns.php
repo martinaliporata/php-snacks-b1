@@ -8,7 +8,27 @@
                         8,
                         5
                     ]
-        ];
+                ]
+        [
+            "name" => "luca",
+            "surname" => "sole",
+            "votes" => [
+                            2,
+                            7,
+                            8,
+                            5
+                        ]
+            ],
+        [
+            "name"=> "luca",
+            "surname" => "sole",
+            "votes" => [
+                            2,
+                            7,
+                            8,
+                            5
+                        ]
+            ],
         [
             "name"=> "luca",
             "surname" => "sole",
@@ -19,24 +39,6 @@
                             5
                         ]
             ];
-        [
-            "name"=> "luca",
-            "surname" => "sole",
-            "votes" => [
-                            2,
-                            7,
-                            8,
-                            5
-                        ]
-            ];
-        [
-            "name"=> "luca",
-            "surname" => "sole",
-            "votes" => [
-                            2,
-                            7,
-                            8,
-                            5
-                        ]
-        ]
+
+            var_dump ($alumns)
 ?>
