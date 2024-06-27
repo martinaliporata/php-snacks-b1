@@ -54,16 +54,24 @@ foreach ($posts as $post => $value) {
 </head>
 <body>
     <main>
-        <h1>
-            Instagram's posts
-        </h1>
-        <p>
-        <?php
-            foreach ($posts as $post => $value) {
-                echo $post, $value;
-            }
-        ?>
-        </p>
+        <ul>
+            <?php foreach($posts as $key => $data) { ?>
+            <li>
+                Data: <?php echo $key ?>
+                <ul>
+                    <?php foreach($data as $singlePost) { ?>
+                    <li>
+                        <p> Title: <?php echo $singlePost['title']; ?> </p>
+                        <p> Author: <?php echo $singlePost['author']; ?> </p>
+                        <p> Text: <?php echo $singlePost['text']; ?> </p>
+                    </li>
+                    <?php } ?>
+                </ul>
+            </li>
+            <?php } ?>
+        </ul>
     </main>
 </body>
 </html>
+
+    
