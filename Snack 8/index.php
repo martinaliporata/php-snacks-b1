@@ -1,63 +1,89 @@
 <?php
-    require_once __DIR__ . "/animals.php";
+$animals = [
+    [
+        "nome" => "lino",
+        "specie" => "cavallo",
+        "classe" => "mammifero"
+    ],
+    [
+        "nome" => "lino",
+        "specie" => "cane",
+        "classe" => "mammifero"
+    ],
+    [
+        "nome" => "lino",
+        "specie" => "anguilla",
+        "classe" => "pesce"
+    ],
+    [
+        "nome" => "lino",
+        "specie" => "merluzzo",
+        "classe" => "pesce"
+    ],
+    [
+        "nome" => "lino",
+        "specie" => "trota",
+        "classe" => "pesce"
+    ],
+    [
+        "nome" => "lino",
+        "specie" => "iguana",
+        "classe" => "rettile"
+    ],
+    [
+        "nome" => "lino",
+        "specie" => "serpente",
+        "classe" => "rettile"
+    ],
+];
 
-    $mammiferi = array_filter(
-        $animals, function ($animal) {
-            return $animal["classe"] == "Mammifero";
+// se vogliamo farlo con una funzione: essendo un array associativo, filtra l'array dove la chiave è uguale a value 
+function filterEquals ($array, $key, $value) {
+    $tempArray= [];
+    foreach($array as $element) {
+        if ($element[$key] == $value) {
+            $tempArray[]= $element;
         }
-    );
+    }
 
-    $pesci = array_filter(
-        $animals, function ($animal) {
-            return $animal["classe"] == "Pesce";
-        }
-    );
+    return $tempArray;
+};
 
-    $anfibi = array_filter(
-        $animals, function ($animal) {
-            return $animal["classe"] == "Anfibio";
-        }
-    );
+// questi sono le funzioni filterEqauls con i tempArray
 
-    $rettili = array_filter(
-        $animals, function ($animal) {
-            return $animal["classe"] == "Rettile";
-        }
-    );
+$mammals = filterEquals($animals, "classe", "mammifero");
+var_dump ($mammals);
+
+$reptiles= filterEquals($animals, "classe", "rettile");
+var_dump ($reptiles);
+
+$fishes= filterEquals($animals, "classe", "pesce");
+var_dump ($fishes);
+
+// $mammals = [];
+// foreach ($animals as $animal) {
+//     // se la classe di animal è mammifero
+//     if($animal["classe"] == "mammifero") {
+//         // allora pushami nell'array mammals l'animal
+//         $mammals[] = $animal;
+//     }
+// }
+
+// $fishes = [];
+// foreach ($animals as $animal) {
+//     // se la classe di animal è mammifero
+//     if($animal["classe"] == "pesce") {
+//         // allora pushami nell'array mammals l'animal
+//         $fishes[] = $animal;
+//     }
+// }
+
+// $reptiles = [];
+// foreach ($animals as $animal) {
+//     // se la classe di animal è mammifero
+//     if($animal["classe"] == "rettile") {
+//         // allora pushami nell'array mammals l'animal
+//         $reptiles[] = $animal;
+//     }
+// }
 ?>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    <main>
-    <ul>
-        <!-- al posto di $mammifero a riga 420 e 42, devo scrivere animal? -->
-        <?php foreach ($mammiferi as $mammifero) { ?>
-            <li>
-                <?php echo $mammifero["nome"] . " " . $mammifero["classe"]; ?>
-            </li>
-        <?php } ?>
-        <?php foreach ($pesci as $pesce) { ?>
-            <li>
-                <?php echo $pesce["nome"] . " " . $pesce["classe"]; ?>
-            </li>
-        <?php } ?>
-        <?php foreach ($anfibi as $anfibio) { ?>
-            <li>
-                <?php echo $anfibio["nome"] . " " . $anfibio["classe"]; ?>
-            </li>
-        <?php } ?>
-        <?php foreach ($rettili as $rettile) { ?>
-            <li>
-                <?php echo $rettile["nome"] . " " . $rettile["classe"]; ?>
-            </li>
-        <?php } ?>
-    </ul>
-    </main>
-</body>
-</html>
