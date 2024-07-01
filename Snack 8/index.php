@@ -60,6 +60,7 @@ var_dump ($reptiles);
 $fishes= filterEquals($animals, "classe", "pesce");
 var_dump ($fishes);
 
+// Questo invece è un filter con il foreach
 // $mammals = [];
 // foreach ($animals as $animal) {
 //     // se la classe di animal è mammifero
