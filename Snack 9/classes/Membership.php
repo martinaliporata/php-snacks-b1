@@ -1,9 +1,14 @@
 <?php
-    class membership{
-        private $id;
 
-        public function __construct ($id) {
-            $this->id=$id;
+    class Membership {
+        private $code;
+
+        // tipizzazione membership
+        public function __construct($code){
+            $this->code= $code;
         }
     }
+
+    
+// getter e setter di ogni variabile di istanza...
 ?>

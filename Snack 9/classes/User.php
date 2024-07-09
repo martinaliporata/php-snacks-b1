@@ -1,21 +1,30 @@
 <?php
     class User {
         private $name;
-        private $surname;
+        private $username;
+        private $email;
 
-    public function __construct($name, $surname)
+    public function __construct($name, $username, $email)
         {
             $this->name= $name;
-            $this->surname= $surname;
+            $this->username= $username;
+            $this->email= $email;
         }
 
-    // public function getFullName(){
-    //     return "Ciao, io sono {$this->name} {this->surname}";
-    // }
+    public function getDiscount(){
+        return 0;
+    }
 
-    // public function setFullName($name, $surname) {
-    //     $this->name=$name;
-    //     $this->surname=$surname;
-    // }
+    public function getName(){
+        return 0;
+    }
+
+    public function setName($name){
+        if (strlen($name)>=2){
+            $this->name= $name;
+        }
+    }
 }
+
+// getter e setter di ogni variabile di istanza...
 ?>
